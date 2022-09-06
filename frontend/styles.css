@@ -110,6 +110,7 @@ header {
 
 .sales-table tbody tr:hover > td {
     background-color: #125300;
+    color: white;
 }
 
 .sales-table tbody tr:nth-child(odd) {

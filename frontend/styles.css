@@ -136,3 +136,13 @@ header {
 .red-btn img {
     width: 19px;
 }
+
+.show-mid {
+    display: none;
+}
+
+@media(min-width: 576px) {
+    .show-mid {
+        display: table-cell;
+    }
+}

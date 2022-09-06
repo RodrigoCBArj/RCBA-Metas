@@ -1,0 +1,15 @@
+.red-btn {
+    height: 45px;
+    width: 45px;
+    background: rgba(51, 235, 91, 0.1);
+    border: 1px solid #33EB5B;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.red-btn img {
+    width: 19px;
+}

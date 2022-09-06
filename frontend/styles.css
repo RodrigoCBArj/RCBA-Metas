@@ -141,8 +141,30 @@ header {
     display: none;
 }
 
+.show-large {
+    display: none;
+}
+
 @media(min-width: 576px) {
     .show-mid {
+        display: table-cell;
+    }
+
+    .card {
+        padding: 35px;
+    }
+
+    .sales-table thead {
+        font-size: 18px;
+    }
+
+    .sales-table tbody {
+        font-size: 18px;
+    }
+}
+
+@media(min-width: 992px) {
+    .show-large {
         display: table-cell;
     }
 }

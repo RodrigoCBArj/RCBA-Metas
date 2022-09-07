@@ -1,8 +1,7 @@
 import Header from "./components/Header";
-import NotificationButton from "./components/NotificationButton";
 import SalesCard from "./components/SalesCard";
 
-function App() {
+export default function App() {
   return (
     <>
       <Header />
@@ -16,5 +15,3 @@ function App() {
     </>
   );
 }
-
-export default App;

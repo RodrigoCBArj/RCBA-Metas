@@ -14,3 +14,10 @@ spring:
         format_sql: true
 #    hibernate:
 #      ddl-auto: update
+
+  twilio:
+    sid: ${TWILIO_SID}
+    key: ${TWILIO_KEY}
+    phone:
+      from: ${TWILIO_PHONE_FROM}
+      to: ${TWILIO_PHONE_TO}

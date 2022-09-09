@@ -21,6 +21,8 @@ export default function SalesCard() {
     const initialDate = minDate.toISOString().slice(0, 10); // "recorta" os primeiros 10 caracteres da string da data (AAAA-MM-DD)
     const finalDate = maxDate.toISOString().slice(0, 10);
 
+    console.log(sales)
+
     axios
       .get(`${BASE_URL}/sales?minDate=${initialDate}&maxDate=${finalDate}`)
       .then((response) => {
@@ -79,7 +81,7 @@ export default function SalesCard() {
                     </td>
                     <td>
                       <div className="red-btn-container">
-                        <NotificationButton />
+                        <NotificationButton saleId={sale.id} />
                       </div>
                     </td>
                   </tr>

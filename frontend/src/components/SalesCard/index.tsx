@@ -8,20 +8,25 @@ import NotificationButton from "../NotificationButton";
 import "./styles.css";
 
 export default function SalesCard() {
-  const oneMonthBefore = new Date(
-    new Date().setDate(new Date().getDate() - 30)
+  const sixMonthsBefore = new Date(
+    new Date().setDate(new Date().getDate() - 183)
   );
 
-  const [minDate, setMinDate] = useState(oneMonthBefore);
+  const [minDate, setMinDate] = useState(sixMonthsBefore);
   const [maxDate, setMaxDate] = useState(new Date());
 
   const [sales, setSales] = useState<Sale[]>([]);
 
   useEffect(() => {
-    axios.get(`${BASE_URL}/sales`).then((response) => {
-      setSales(response.data.content);
-    });
-  }, []);
+    const initialDate = minDate.toISOString().slice(0, 10); // "recorta" os primeiros 10 caracteres da string da data (AAAA-MM-DD)
+    const finalDate = maxDate.toISOString().slice(0, 10);
+
+    axios
+      .get(`${BASE_URL}/sales?minDate=${initialDate}&maxDate=${finalDate}`)
+      .then((response) => {
+        setSales(response.data.content);
+      });
+  }, [minDate, maxDate]);
 
   return (
     <>
@@ -61,25 +66,25 @@ export default function SalesCard() {
               </tr>
             </thead>
             <tbody>
-
               {sales.map((sale) => {
-                return(
+                return (
                   <tr key={sale.id}>
                     <td className="show-large">{sale.id}</td>
                     <td>{sale.sellerName}</td>
                     <td className="show-large">{sale.visited}</td>
                     <td className="show-large">{sale.deals}</td>
                     <td>R$ {sale.amount.toFixed(2)}</td>
-                    <td className="show-mid">{new Date(sale.date).toLocaleDateString()}</td>
+                    <td className="show-mid">
+                      {new Date(sale.date).toLocaleDateString()}
+                    </td>
                     <td>
                       <div className="red-btn-container">
                         <NotificationButton />
                       </div>
                     </td>
                   </tr>
-                )
+                );
               })}
-          
             </tbody>
           </table>
         </div>

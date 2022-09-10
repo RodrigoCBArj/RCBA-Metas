@@ -75,7 +75,7 @@ export default function SalesCard() {
                     <td className="show-large">{sale.deals}</td>
                     <td>R$ {sale.amount.toFixed(2)}</td>
                     <td className="show-mid">
-                      {new Date(sale.date).toLocaleDateString()}
+                      {new Date(sale.date).toLocaleDateString('pt-BR', {timeZone: 'UTC'})}
                     </td>
                     <td>
                       <div className="red-btn-container">

@@ -6,3 +6,10 @@ O **frontend**, hospedado no Netlify utilizando **CI/CD**, é construído em **R
 O **backend** foi desenvolvido em **Java Spring Boot** e está hospedado no Heroku. O banco de dados **H2** foi utilizado para agilizar o desenvolvimento e testes.
 
 O projeto é bem simples, pois o principal objetivo é o estudo do consumo de APIs externas de envio de mensagens e o uso dos React Hooks para filtros de buscas por datas.
+
+---
+
+Link para acesso ao site: https://rcbametas.netlify.app
+
+Link para acesso à API: https://rcba-metas.herokuapp.com
+(O herolku deixará de oferecer o serviço gratuito em 28/11/2022, com isso o backend deixará de responder)

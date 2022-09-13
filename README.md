@@ -11,5 +11,5 @@ O projeto é bem simples, pois o principal objetivo é o estudo do consumo de AP
 
 Link para acesso ao site: https://rcbametas.netlify.app
 
-Link para acesso à API: https://rcba-metas.herokuapp.com
-(O herolku deixará de oferecer o serviço gratuito em 28/11/2022, com isso o backend deixará de responder)
+Link para acesso à API: https://rcba-metas.herokuapp.com 
+(O Heroku deixará de oferecer o serviço gratuito em 28/11/2022, com isso o backend deixará de responder)
